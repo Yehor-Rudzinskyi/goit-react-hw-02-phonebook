@@ -14,7 +14,8 @@ const App = () => {
           newContacts.name === name || newContacts.number === number,
       )
     )
-      return;
+      return alert('АстАнавитесь!');
+
     setContacts(prevState => [newContacts, ...prevState]);
   };
   const handleDeleteContact = id => {
