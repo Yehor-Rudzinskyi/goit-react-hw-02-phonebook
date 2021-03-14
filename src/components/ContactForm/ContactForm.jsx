@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import InputMask from 'react-input-mask';
+import './ContactForm.scss';
 
 const ContactForm = ({ onSubmit }) => {
   const [name, setName] = useState('');
@@ -26,14 +28,18 @@ const ContactForm = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="">
-        {' '}
+    <form onSubmit={handleSubmit} className="contact-form">
+      <label htmlFor="id-3" className="form-label">
         Name
-        <input type="text" value={name} onChange={handleSetName} />
+        <input
+          id="id-3"
+          type="text"
+          value={name}
+          onChange={handleSetName}
+          className="form-input-name"
+        />
       </label>
-      <label htmlFor="id-2">
-        {' '}
+      <label htmlFor="id-2" className="form-label">
         Number
         <InputMask
           id="id-2"
@@ -41,11 +47,18 @@ const ContactForm = ({ onSubmit }) => {
           mask="+3\80 99 999 99 99"
           value={number}
           onChange={handleSetNumber}
+          className="form-input-number"
         />
       </label>
-      <button type="submit">Add contact</button>
+      <button type="submit" className="add-button">
+        Add contact
+      </button>
     </form>
   );
+};
+
+ContactForm.propeTypes = {
+  onSubmit: PropTypes.func,
 };
 
 export default ContactForm;

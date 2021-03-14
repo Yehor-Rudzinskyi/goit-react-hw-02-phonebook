@@ -1,0 +1,29 @@
+@import './shared.scss';
+
+body {
+  background-image: url(https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Monochrome-Type-Simple-Background-Image.jpg);
+  background-size: cover;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+li {
+  list-style: none;
+}

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ContactForm from './components/ContactForm';
 import ContactList from './components/ContactList';
 import Filter from './components/Filter';
+import './styles/app.scss';
 
 const App = () => {
   const [contacts, setContacts] = useState([]);
@@ -31,7 +32,7 @@ const App = () => {
   );
 
   return (
-    <div>
+    <div className="container">
       <h1>Phonebook</h1>
       <ContactForm onSubmit={handleOnSubmit} />
 
