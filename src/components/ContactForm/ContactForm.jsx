@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import shortid from 'shortid';
+import InputMask from 'react-input-mask';
 
 const ContactForm = ({ onSubmit }) => {
   const [name, setName] = useState('');
@@ -31,10 +32,16 @@ const ContactForm = ({ onSubmit }) => {
         Name
         <input type="text" value={name} onChange={handleSetName} />
       </label>
-      <label htmlFor="">
+      <label htmlFor="id-2">
         {' '}
         Number
-        <input type="text" value={number} onChange={handleSetNumber} />
+        <InputMask
+          id="id-2"
+          type="tel"
+          mask="+3\80 99 999 99 99"
+          value={number}
+          onChange={handleSetNumber}
+        />
       </label>
       <button type="submit">Add contact</button>
     </form>
