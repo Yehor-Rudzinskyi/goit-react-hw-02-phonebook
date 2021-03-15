@@ -37,6 +37,7 @@ const ContactForm = ({ onSubmit }) => {
           value={name}
           onChange={handleSetName}
           className="form-input-name"
+          maxLength="13"
         />
       </label>
       <label htmlFor="id-2" className="form-label">

@@ -1,7 +1,7 @@
 @import './shared.scss';
 
 body {
-  background-image: url(https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Monochrome-Type-Simple-Background-Image.jpg);
+  background-image: url(./BackgroundImage.jpg);
   background-size: cover;
 }
 
@@ -26,4 +26,8 @@ p {
 
 li {
   list-style: none;
+}
+
+ul {
+  padding: 0;
 }
